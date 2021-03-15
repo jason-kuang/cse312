@@ -4,9 +4,10 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+
+from online_users.models import OnlineUserActivity
 from .models import Board
 
-from ..online_users.models import OnlineUserActivity
 
 
 def render_forum(request):
