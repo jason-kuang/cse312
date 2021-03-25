@@ -7,6 +7,15 @@ class Board(models.Model):
     name = models.CharField(max_length=30, unique=True)
     description = models.CharField(max_length=250)
 
+    def get_topics_count(self):
+        return self.topics.count()
+
+    def get_posts_count(self):
+        count = 0
+        for topic in self.topics.all():
+            count += topic.posts
+        return count
+
     def __str__(self):
         return self.name
 
@@ -25,3 +34,4 @@ class Post(models.Model):
     created_by = models.ForeignKey(User, related_name='posts', null=True, on_delete=models.SET_NULL)
     updated_when = models.DateField(null=True)
     updated_by = models.ForeignKey(User, null=True, related_name='+', on_delete=models.SET_NULL)
+
