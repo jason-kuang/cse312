@@ -1,0 +1,48 @@
+body {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("anime.jpg");
+  }
+  
+  .jumbotron {
+     display: table-cell;
+     vertical-align: middle;
+  }
+/* column1 */
+#col1 {
+    background-color: #016FB9;
+    width: 650px; 
+    height: 600px;
+}
+#umaru_chan {
+    margin: auto;    
+    display: block;
+}
+h1 {
+    text-align: center;
+    color:#FF9505;
+}
+/* column2 */
+#col2 {
+    background-color: #FF9505;
+    position: absolute;
+    width: 650px; 
+    height: 600px; 
+    left: 740px;
+    top: 110px;
+}
+h2 {
+    text-align: center;
+    color: #016FB9;
+}
+#user {
+    color:#016FB9 ;
+}
+button {
+    position: absolute;
+    left: 240px;
+    top: 250px;
+    width: 200px;
+}
