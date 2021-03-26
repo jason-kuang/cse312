@@ -1,0 +1,13 @@
+<title>Welcome to your profile</title>
+
+    <div class="container">
+        <h1> Profile</h1>
+        <p>Username: {{ user }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Picture: {{user.UserProfile.avatar}}</p>
+        <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+    </div>

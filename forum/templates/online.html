@@ -8,6 +8,7 @@
     <h1>Users</h1>
 
     {% for users in online %}
+      {% if users.user.userprofile.avatar %}<img src="{{ users.user.userprofile.avatar.url}}"> {% endif %}
       {{ users.user }} <br>
     {% endfor %}
     <br>
