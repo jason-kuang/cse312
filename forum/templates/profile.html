@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<h1> Profile</h1>
+<p>Username: {{ user }}</p>
+<p>Email: {{ user.email }}</p>
+{% if user.userprofile.avatar %}<p>Avatar:</p><img src= "{{ user.userprofile.avatar.url }}" alt=""> {% endif %}
+<br>
+<form method="post" action="" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ user_form.as_p}}
+  {{ profile_form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+
+{% endblock %}
